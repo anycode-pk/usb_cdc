@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C24634F7-E8F1-4E92-8010-D478BE433906}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinClient</RootNamespace>
+    <AssemblyName>USBMGR</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>usbcdcico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\BaseViewControl.Designer.cs">
+      <DependentUpon>BaseViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseViewForm.Designer.cs">
+      <DependentUpon>BaseViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Informer.cs" />
+    <Compile Include="Base\SampleControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\SampleControls.Designer.cs">
+      <DependentUpon>SampleControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdArchetypeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdArchetypeEditForm.Designer.cs">
+      <DependentUpon>CmdArchetypeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdArchetypeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdArchetypeListForm.Designer.cs">
+      <DependentUpon>CmdArchetypeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdListEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdListEditForm.Designer.cs">
+      <DependentUpon>CmdListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdListListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\CmdListListForm.Designer.cs">
+      <DependentUpon>CmdListListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\CommandEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\CommandEditForm.Designer.cs">
+      <DependentUpon>CommandEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\ConfDeviceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\ConfDeviceEditForm.Designer.cs">
+      <DependentUpon>ConfDeviceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevicesCfg\ConfDeviceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevicesCfg\ConfDeviceListForm.Designer.cs">
+      <DependentUpon>ConfDeviceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\DeviceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\DeviceEditForm.Designer.cs">
+      <DependentUpon>DeviceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\DeviceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\DeviceListForm.Designer.cs">
+      <DependentUpon>DeviceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\PasswordTypedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\PasswordTypedForm.Designer.cs">
+      <DependentUpon>PasswordTypedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\RightList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\RightList.Designer.cs">
+      <DependentUpon>RightList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\StationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\StationEditForm.Designer.cs">
+      <DependentUpon>StationEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\StationListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\StationListForm.Designer.cs">
+      <DependentUpon>StationListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\UnitEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\UnitEditForm.Designer.cs">
+      <DependentUpon>UnitEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\UnitListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\UnitListForm.Designer.cs">
+      <DependentUpon>UnitListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadApp\ConfigSelectorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoadApp\ConfigSelectorControl.Designer.cs">
+      <DependentUpon>ConfigSelectorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadApp\LoginEntryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoadApp\LoginEntryControl.Designer.cs">
+      <DependentUpon>LoginEntryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadyState\ConfigSQLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReadyState\ConfigSQLControl.Designer.cs">
+      <DependentUpon>ConfigSQLControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadyState\TestDeviceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReadyState\TestDeviceControl.Designer.cs">
+      <DependentUpon>TestDeviceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadyState\MeasureStationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReadyState\MeasureStationControl.Designer.cs">
+      <DependentUpon>MeasureStationControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseViewForm.resx">
+      <DependentUpon>BaseViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\SampleControls.resx">
+      <DependentUpon>SampleControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\CmdArchetypeEditForm.resx">
+      <DependentUpon>CmdArchetypeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\CmdArchetypeListForm.resx">
+      <DependentUpon>CmdArchetypeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\CmdListEditForm.resx">
+      <DependentUpon>CmdListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\CmdListListForm.resx">
+      <DependentUpon>CmdListListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\CommandEditForm.resx">
+      <DependentUpon>CommandEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\ConfDeviceEditForm.resx">
+      <DependentUpon>ConfDeviceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevicesCfg\ConfDeviceListForm.resx">
+      <DependentUpon>ConfDeviceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\DeviceEditForm.resx">
+      <DependentUpon>DeviceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\DeviceListForm.resx">
+      <DependentUpon>DeviceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\PasswordTypedForm.resx">
+      <DependentUpon>PasswordTypedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\RightList.resx">
+      <DependentUpon>RightList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\StationEditForm.resx">
+      <DependentUpon>StationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\StationListForm.resx">
+      <DependentUpon>StationListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\UnitEditForm.resx">
+      <DependentUpon>UnitEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\UnitListForm.resx">
+      <DependentUpon>UnitListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadApp\ConfigSelectorControl.resx">
+      <DependentUpon>ConfigSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadApp\LoginEntryControl.resx">
+      <DependentUpon>LoginEntryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReadyState\ConfigSQLControl.resx">
+      <DependentUpon>ConfigSQLControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadyState\MeasureStationControl.resx">
+      <DependentUpon>MeasureStationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadyState\TestDeviceControl.resx">
+      <DependentUpon>TestDeviceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\CommonModel.Class1.datasource" />
+    <None Include="Properties\DataSources\CommonModel.CommonContext.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.CmdArchetype.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.CmdList.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Command.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.ConfDevice.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Device.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Entities.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.EntityBase.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.MeasureCycle.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Measurement.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.MeasureSession.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.MeasureStation.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.MeasureValue.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Right.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.StationDeviceM2M.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.Unit.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.UsbMgrDbEntities.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.User.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.UserRight.datasource" />
+    <None Include="Properties\DataSources\CommonModel.Entities.UserStationM2M.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationLogic\ApplicationLogic.csproj">
+      <Project>{61690FDB-72FC-42FA-B471-4B32DF6DF9A8}</Project>
+      <Name>ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj">
+      <Project>{8D6F4E09-8DFA-4477-A950-F977D9BF3E78}</Project>
+      <Name>CommonModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="usbmgrico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Aboutbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="usbcdcico.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
