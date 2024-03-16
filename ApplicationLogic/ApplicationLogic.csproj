@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61690FDB-72FC-42FA-B471-4B32DF6DF9A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ApplicationLogic</RootNamespace>
+    <AssemblyName>ApplicationLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global\ModelChangedListener.cs" />
+    <Compile Include="Global\UserRightChecker.cs" />
+    <Compile Include="Global\ViewFunctionTypes.cs" />
+    <Compile Include="Global\WindowResult.cs" />
+    <Compile Include="Helpers\ConstRepository.cs" />
+    <Compile Include="Helpers\CryptographyFunctions.cs" />
+    <Compile Include="Helpers\FileConfig.cs" />
+    <Compile Include="Helpers\FileIOFunctions.cs" />
+    <Compile Include="Helpers\TextContentRepository.cs" />
+    <Compile Include="Interfaces\Base\IBaseView.cs" />
+    <Compile Include="Interfaces\Base\IInformer.cs" />
+    <Compile Include="Interfaces\Base\IPresenter.cs" />
+    <Compile Include="Interfaces\DevicesCfg\ICmdArchetypeEditView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\ICmdArchetypeListView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\ICmdListEditView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\ICmdListListView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\ICommandEditView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\IConfDeviceEditView.cs" />
+    <Compile Include="Interfaces\DevicesCfg\IConfDeviceListView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IDeviceEditView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IDeviceListView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IRightsView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IStationEditView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IStationListView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IUnitEditView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IUnitListView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IUserEditView.cs" />
+    <Compile Include="Interfaces\Dictionaries\IUserListView.cs" />
+    <Compile Include="Interfaces\LoadApp\IConfigSelectorVew.cs" />
+    <Compile Include="Interfaces\ReadyState\IConfigSQLView.cs" />
+    <Compile Include="Interfaces\LoadApp\ILoginView.cs" />
+    <Compile Include="Interfaces\ReadyState\ITestDeviceView.cs" />
+    <Compile Include="Interfaces\ReadyState\IMainFormView.cs" />
+    <Compile Include="Interfaces\ReadyState\IMeasureStationView.cs" />
+    <Compile Include="Presenters\Base\BasePresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\CmdArchetypeEditPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\CmdArchetypeListPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\CmdListEditPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\CmdListListPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\CommandEditPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\ConfDeviceEditPresenter.cs" />
+    <Compile Include="Presenters\DevicesCfg\ConfDeviceListPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\DeviceEditPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\DeviceListPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\RightsPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\StationListPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\StationsEditPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\UnitEditPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\UnitListPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\UserEditPresenter.cs" />
+    <Compile Include="Presenters\Dictionaries\UserListPresenter.cs" />
+    <Compile Include="Presenters\LoadApp\ConfigSelectorPresenter.cs" />
+    <Compile Include="Presenters\ReadyState\ConfigSQLPresenter.cs" />
+    <Compile Include="Presenters\LoadApp\LoginPresenter.cs" />
+    <Compile Include="Presenters\ReadyState\TestDevicePresenter.cs" />
+    <Compile Include="Presenters\ReadyState\MeasureStationPresenter.cs" />
+    <Compile Include="Presenters\ReadyState\MainFormPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{B51208CC-717F-42D7-8984-F9702B121365}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj">
+      <Project>{8D6F4E09-8DFA-4477-A950-F977D9BF3E78}</Project>
+      <Name>CommonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataManager\DataManager.csproj">
+      <Project>{65CDE160-82EE-4CBD-B8DD-187F95CF06C7}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
